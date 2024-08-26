@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table tag</title>
+
+    <style>
+      table {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      td,
+      th {
+        border: 1px solid black;
+        padding: 12px;
+      }
+      .col1 {
+        width: 80px;
+      }
+      .col2 {
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Table 기본</h1>
+    <table>
+      <!--표를 만드는 태그, 표 전체를 감싼다.-->
+      <caption>
+        <!--표의 제목이나 설명-->
+        프로필 테이블
+      </caption>
+
+      <tr>
+        <!--표의 행-->
+        <th>이름</th>
+        <!--표의 제목 열-->
+        <th>취미</th>
+        <th>특기</th>
+      </tr>
+
+      <tr>
+        <td>홍길동</td>
+        <!--표의 일반 열-->
+        <td>도술</td>
+        <td>축지법</td>
+      </tr>
+
+      <tr>
+        <td>짐코딩</td>
+        <td>헬스</td>
+        <td>코딩</td>
+      </tr>
+    </table>
+
+    <hr />
+    <table>
+      <caption>
+        학급점수
+      </caption>
+      <colgroup>
+        <col class="col1" />
+        <col class="col2" />
+        <col class="col3" />
+        <col class="col4" />
+        <col class="col5" />
+        <col class="col6" />
+      </colgroup>
+
+      <thead>
+        <tr>
+          <th>반</th>
+          <th>이름</th>
+          <th>국어</th>
+          <th>영어</th>
+          <th>수학</th>
+          <th>코딩</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2">1반</td>
+          <!--tbody 안에 있으므로 tfoot에 있는 1반은 합체 안됨.-->
+          <td>홍길동</td>
+          <td>90</td>
+          <td>100</td>
+          <td>80</td>
+          <td>92</td>
+        </tr>
+
+        <tr>
+          <td>짐코딩</td>
+          <td>98</td>
+          <td>80</td>
+          <td>70</td>
+          <td>90</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td colspan="2">평균</td>
+          <td>94</td>
+          <td>90</td>
+          <td>75</td>
+          <td>91</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
