@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>radio vs checkbox</title>
+    <style>
+      form {
+      }
+      .red {
+        color: red;
+      }
+      .orange {
+        color: orange;
+      }
+      .yellow {
+        color: rgba(226, 226, 7, 0.684);
+      }
+      .green {
+        color: green;
+      }
+      .blue {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/sign">
+      <fieldset>
+        <legend>좋아하는 색상을 골라주세용</legend>
+        <ul>
+          <li>
+            <label class="red" for="red"> 빨강 </label>
+            <input type="checkbox" name="color" id="red" />
+          </li>
+          <li>
+            <label class="orange" for="orange">주황 </label>
+            <input type="checkbox" name="color" id="orange" />
+          </li>
+          <li>
+            <label class="yellow" for="yellow">노랑</label>
+            <input type="checkbox" name="color" id="yellow" />
+          </li>
+          <li>
+            <label class="green" for="green">초록 </label>
+            <input type="checkbox" name="color" id="green" />
+          </li>
+          <li>
+            <label class="blue" for="blue">파랑 </label>
+            <input type="checkbox" name="color" id="blue" />
+          </li>
+        </ul>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>배송 골라골라</legend>
+        <ul>
+          <li>
+            <label for="free">무료 </label>
+            <input type="radio" name="delivery" id="free" />
+          </li>
+          <li>
+            <label for="paid">유료 </label>
+            <input type="radio" name="delivery" id="paid" />
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <legend>자기소개서</legend>
+        <textarea name="" id="" rows="5" cols="30" maxlength="100" placeholder="글자수 100자 제한"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>사과 주문</legend>
+        <select name="apple" id="apple" required>
+          <option value="none" selected disabled hidden>===주문량을 선택하세요===</option>
+          <option value="10kg">사과 10kg</option>
+          <option value="20kg">사과 20kg</option>
+          <option value="30kg">사과 30kg</option>
+          <option value="40kg">사과 40kg</option>
+        </select>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>주문하세요</legend>
+        <ul>
+          <li>
+            <label for="ice"> 무슨 맛 </label>
+            <input list="flavor" id="ice" name="ice" />
+            <datalist id="flavor">
+              <option value="chocolate"></option>
+              <option value="strawberry"></option>
+              <option value="banana"></option>
+              <option value="melon"></option>
+              <option value="mint"></option>
+            </datalist>
+          </li>
+        </ul>
+      </fieldset>
+      <button>제출하기</button>
+      <input type="reset" />
+      <button type="button" onclick="alert('Hello world')">눌러눌러</button>
+    </form>
+  </body>
+</html>
